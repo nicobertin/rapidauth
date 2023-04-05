@@ -1,4 +1,4 @@
-# Rapidauth
+![rapidauth logo](rapidauth.png)
 
 Welcome to Rapidauth, a gem in development for API authentication using JWT.
 

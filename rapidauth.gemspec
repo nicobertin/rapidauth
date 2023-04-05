@@ -26,12 +26,17 @@ Gem::Specification.new do |spec|
       (File.expand_path(f) == __FILE__) || f.start_with?(*%w[bin/ test/ spec/ features/ .git .circleci appveyor])
     end
   end
+
+  # Agrega las carpetas que deseas incluir en la gema.
+  spec.files += %w[lib/generators lib/templates]
+
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
+  spec.add_dependency "jwt", "~> 2.7"
+  spec.add_dependency "bcrypt", "~> 3.1", ">= 3.1.18"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
